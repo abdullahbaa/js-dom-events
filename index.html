@@ -8,7 +8,48 @@
 <body>
     <h1>Dom er ajker Special Events</h1>
     <button onclick="console.log('03')">Click Me</button>
-    <button onclick="console.log('10')">Another Button</button>
+    <button title="This is a tooltip" onclick="console.log('07')">Click Me</button>
+    <button onclick="console.log('10')">Another Button</button> <br>
+    <button onclick="document.body.style.backgroundColor='yellow'">Make yellow</button>
+    <button onclick="makeRed()">Make Red</button>
+    <button onclick="makeBlue()">Make Blue</button>
+    <button id="make-purple">Make Purple</button>
+    <button id="make-green">Make Green</button>
+    <button id="make-goldenrod" > Make Goldenrod</button>
+
+
     <script src="js/events.js"></script>
+    <script>
+        // Important .We will use it regularly
+        // Golden Button
+        document.getElementById('make-goldenrod').addEventListener('click',function(){
+            document.body.style.backgroundColor = 'goldenrod';
+        })
+
+        // Green Button
+        const makeGreenButton = document.getElementById('make-green');
+        makeGreenButton.addEventListener('click', function makeGreen(){
+            document.body.style.backgroundColor = 'green';
+        })
+
+        // Purple Button
+        const purpleButton =document.getElementById('make-purple');
+        // console.log(purpleButton);
+        purpleButton.onclick = function makePurple(){
+            document.body.style.backgroundColor ='purple';
+        }
+
+        // Red Button
+        function makeRed(){
+            document.body.style.backgroundColor ='red';
+
+        } 
+
+        // Blue Button
+        function makeBlue(){
+            document.body.style.backgroundColor ='Blue';
+
+        }
+    </script>
 </body>
 </html>
